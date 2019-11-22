@@ -20,6 +20,6 @@ TEST(TicTacToeBoardTest, unitTestName) {
 */
 
 TEST(TicTacToeBoardTest, sanityCheck) {
-	TicTacToeBoardTest ticTacToeBoardTest;
+	TicTacToeBoard ticTacToeBoard;
 	ASSERT_TRUE(true);
 }
