@@ -5,8 +5,7 @@
 #include <gtest/gtest.h>
 #include "TicTacToeBoard.h"
  
-class TicTacToeBoardTest : public ::testing::Test
-{
+class TicTacToeBoardTest : public ::testing::Test {
 	protected:
 		TicTacToeBoardTest(){} //constructor runs before each test
 		virtual ~TicTacToeBoardTest(){} //destructor cleans up after tests
@@ -15,8 +14,12 @@ class TicTacToeBoardTest : public ::testing::Test
 };
 
 /* EXAMPLE TEST FORMAT
-TEST(TicTacToeBoardTest, unitTestName)
-{
+TEST(TicTacToeBoardTest, unitTestName) {
 	ASSERT_TRUE(true);
 }
 */
+
+TEST(TicTacToeBoardTest, sanityCheck) {
+	TicTacToeBoardTest ticTacToeBoardTest;
+	ASSERT_TRUE(true);
+}
