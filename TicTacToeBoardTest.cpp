@@ -30,7 +30,7 @@ TEST(TicTacToeBoardTest, toggleTurnX) {
   ASSERT_EQ(ticTacToeBoard.toggleTurn(), 'O');
 }
 // Test Second toggleTurn()
-TEST(TicTacToeBoardTest, toggleTurnX) {
+TEST(TicTacToeBoardTest, toggleTurnO) {
   TicTacToeBoard ticTacToeBoard;
   ticTacToeBoard.toggleTurn();
   ASSERT_EQ(ticTacToeBoard.toggleTurn(), 'X');
