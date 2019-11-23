@@ -26,5 +26,5 @@ TEST(TicTacToeBoardTest, sanityCheck) {
 
 TEST(TicTacToeBoardTest, toggleTurnX) {
   TicTacToeBoard ticTacToeBoard;
-  ASSERT_EQ(ticTacToeBoard.toggleTurn(), 'X');
+  ASSERT_EQ(ticTacToeBoard.toggleTurn(), 'O');
 }
