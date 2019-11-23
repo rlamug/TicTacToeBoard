@@ -70,8 +70,8 @@ TEST(TicTacToeBoardTest, getPieceO) {
   ticTacToeBoard.placePiece(0, 1);
   ASSERT_EQ(ticTacToeBoard.getPiece(0, 1), 'O');
 }
-// Gets piece of second move
-TEST(TicTacToeBoardTest, getPieceX) {
+// Gets piece of invalid coordinate
+TEST(TicTacToeBoardTest, getPieceInvalid) {
   TicTacToeBoard ticTacToeBoard;
   ASSERT_EQ(ticTacToeBoard.getPiece(3, 3), '?');
 }
