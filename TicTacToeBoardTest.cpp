@@ -75,3 +75,34 @@ TEST(TicTacToeBoardTest, getPieceInvalid) {
   TicTacToeBoard ticTacToeBoard;
   ASSERT_EQ(ticTacToeBoard.getPiece(3, 3), '?');
 }
+
+/*** getWinner ***/
+// No winner game is still going
+TEST(TicTacToeBoardTest, getWinnerInvalid) {
+  TicTacToeBoard ticTacToeBoard;
+  ASSERT_EQ(ticTacToeBoard.getWinner(), '?');
+}
+// No winner game is over
+TEST(TicTacToeBoardTest, getWinnerBlank) {
+  TicTacToeBoard ticTacToeBoard;
+  ticTacToeBoard.placePiece(0, 0);
+  ticTacToeBoard.placePiece(0, 1);
+  ticTacToeBoard.placePiece(0, 2);
+  ticTacToeBoard.placePiece(1, 1);
+  ticTacToeBoard.placePiece(2, 1);
+  ticTacToeBoard.placePiece(2, 0);
+  ticTacToeBoard.placePiece(1, 0);
+  ticTacToeBoard.placePiece(1, 2);
+  ticTacToeBoard.placePiece(2, 2);
+  ASSERT_EQ(ticTacToeBoard.getWinner(), ' ');
+}
+// Winner
+TEST(TicTacToeBoardTest, getWinnerX) {
+  TicTacToeBoard ticTacToeBoard;
+  ticTacToeBoard.placePiece(0, 0);
+  ticTacToeBoard.placePiece(1, 0);
+  ticTacToeBoard.placePiece(0, 1);
+  ticTacToeBoard.placePiece(1, 1);
+  ticTacToeBoard.placePiece(0, 2);
+  ASSERT_EQ(ticTacToeBoard.getWinner(), 'X');
+}
