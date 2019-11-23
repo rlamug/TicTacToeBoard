@@ -18,13 +18,21 @@ TEST(TicTacToeBoardTest, unitTestName) {
   ASSERT_TRUE(true);
 }
 */
-
+// Sanity Check
 TEST(TicTacToeBoardTest, sanityCheck) {
   TicTacToeBoard ticTacToeBoard;
   ASSERT_TRUE(true);
 }
-
+/*** toggleTurn ***/
+// Test Initial toggleTurn()
 TEST(TicTacToeBoardTest, toggleTurnX) {
   TicTacToeBoard ticTacToeBoard;
   ASSERT_EQ(ticTacToeBoard.toggleTurn(), 'O');
 }
+// Test Second toggleTurn()
+TEST(TicTacToeBoardTest, toggleTurnX) {
+  TicTacToeBoard ticTacToeBoard;
+  ticTacToeBoard.toggleTurn();
+  ASSERT_EQ(ticTacToeBoard.toggleTurn(), 'X');
+}
+
