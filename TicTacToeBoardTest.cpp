@@ -55,14 +55,23 @@ TEST(TicTacToeBoardTest, placePieceInvalid) {
   TicTacToeBoard ticTacToeBoard;
   ASSERT_EQ(ticTacToeBoard.placePiece(3, 3), '?');
 }
-// Shouldn't place piece when game is over
-TEST(TicTacToeBoardTest, placePieceGameOver) {
+
+/*** getPiece ***/
+// Gets piece of first move
+TEST(TicTacToeBoardTest, getPieceX) {
   TicTacToeBoard ticTacToeBoard;
   ticTacToeBoard.placePiece(0, 0);
-  ticTacToeBoard.placePiece(1, 0);
+  ASSERT_EQ(ticTacToeBoard.getPiece(0, 0), 'X');
+}
+// Gets piece of second move
+TEST(TicTacToeBoardTest, getPieceO) {
+  TicTacToeBoard ticTacToeBoard;
+  ticTacToeBoard.placePiece(0, 0);
   ticTacToeBoard.placePiece(0, 1);
-  ticTacToeBoard.placePiece(1, 1);
-  ticTacToeBoard.placePiece(0, 2);
-  ticTacToeBoard.placePiece(1, 3);
-  ASSERT_EQ(ticTacToeBoard.getPiece(1, 3), ' ');
+  ASSERT_EQ(ticTacToeBoard.getPiece(0, 1), 'O');
+}
+// Gets piece of second move
+TEST(TicTacToeBoardTest, getPieceX) {
+  TicTacToeBoard ticTacToeBoard;
+  ASSERT_EQ(ticTacToeBoard.getPiece(3, 3), '?');
 }
