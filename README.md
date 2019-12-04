@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/rlamug/TicTacToeBoard.svg?branch=master)](https://travis-ci.org/rlamug/TicTacToeBoard)
+[![Coverage Status](https://coveralls.io/repos/github/rlamug/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/rlamug/TicTacToeBoard?branch=master)
+
 # TicTacToeBoard
 
 ## Associated Enumerated Types
